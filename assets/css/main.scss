@@ -1,4 +1,82 @@
 ---
 ---
 
-@import "main";
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+// @import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+// @import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+// @import "navbar";
+@import "card";
+
+.card-deck .card {
+	min-width: 220px;
+}
+
+.card-pricing.popular {
+    z-index: 1;
+    /* border: 3px solid #007bff; */
+}
+.card-pricing .list-unstyled li {
+    padding: .5rem 0;
+    color: #6c757d;
+}
+
+@import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+@import "jumbotron";
+// @import "alert";
+// @import "progress";
+// @import "media";
+@import "list-group";
+@import "close";
+// @import "toasts";
+@import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
+@import "utilities";
+
+.why img {
+	width: 70px;
+    margin-bottom: 30px
+}
+
+#backtotop {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  font-size: 200%;
+}
+#backtotop:hover {
+	text-decoration: none;
+}
+
+#backtotop.aktif {
+  opacity: 1;
+  visibility: visible;
+}
+
+@import "print";

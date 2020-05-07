@@ -1,0 +1,12 @@
+navbar:
+  - title: Tentang
+    url: "#about"
+    version: 1
+
+  - title: Alasan
+    url: "#alasan"
+    version: 1
+
+  - title: "Harga"
+    url: "#price"
+    version: 1

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "id-ID" }}">
+	{% include head.html %}
+  <body>
+  	<a class='d-inline-flex text-light bg-dark rounded-circle justify-content-center align-items-center font-weight-light' href='#top' id='backtotop'>
+	    <svg aria-hidden='true' class='svg-inline--fa fa-arrow-up fa-w-14 fa-7x' data-icon='arrow-up' data-prefix='fal' focusable='false' role='img' style='width:20px' viewBox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'>
+	        <path class='' d='M4.465 263.536l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L207 92.113V468c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V92.113l178.494 178.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.05c-4.686-4.686-12.284-4.686-16.971 0L4.465 246.566c-4.687 4.686-4.687 12.284 0 16.97z' fill='currentColor'></path>
+	    </svg>
+	</a>
+
+  	{% include main-navbar.html %}
+  	{% include main-jumbotron.html %}
+  	{% include main-about.html %}
+  	{% include main-why.html %}
+  	{% include main-about-dark.html %}
+  	{% include main-pricing-1.html %}
+  	{% include main-cta-white-1.html %}
+  	{% include main-footer-white-1.html %}
+
+	<script crossorigin='anonymous' integrity='sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js'></script>
+	<script crossorigin='anonymous' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
+	<script>
+		var btn = $('#backtotop');
+
+		$(window).scroll(function() {
+		    if ($(window).scrollTop() > 300) {
+		        btn.addClass('aktif');
+		    } else {
+		        btn.removeClass('aktif');
+		    }
+		});
+	</script>
+  </body>
+</html>
