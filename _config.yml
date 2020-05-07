@@ -2,9 +2,24 @@ url: "https://landingpageku.com" # the base hostname & protocol for your site, e
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Landing Page ku" # the name of your site, e.g. ACME Corp.
 
+collections_dir: halaman
+
+collections:
+  package1:
+   output: true
+   permalink: /p/:title/
+  situs:
+   output: true
+   permalink: /:title/
+  posts:
+   output: true 
+   permalink: /blog/:title
+
+
 sass:
  style: compressed
 
 plugins:
  - jekyll-sitemap
  - jekyll-seo-tag
+ - jekyll-last-modified-at

@@ -1,15 +1,13 @@
 <div class='animated fadeInDown blp-navbar d-flex flex-column flex-md-row align-items-center p-3 px-md-4 border-bottom shadow-sm bg-white' id='top'>
-    <img style="width: 150px" class="mx-auto ml-md-0 mr-md-auto" src="{{ "/assets/img/logo.png" | relative_url }}" />
-    <div class='section' id='menu'>
-        <div class='widget LinkList my-2 my-md-0 mr-md-3' data-version='2' id='LinkList3'>
-            <nav>
-                {% for item in site.data.main.navbar %}
-                  {% if item.version == 1 %}
-                    <a class='p-2 text-dark' href="{{ item.url }}">{{ item.title }}</a>
-                  {% endif %}
-                {% endfor %}
-            </nav>
+    <a href="{{ site.url | absolute_url }}" class="mx-auto ml-md-0 mr-md-auto">
+        <img style="width: 150px"  alt="{{site.title}}" src="{{ "/assets/img/logo.png" | relative_url }}" />
+    </a>
+    <div id="menu">
+        <div class="my-2 my-md-0 mr-md-3">
+            <nav>{% for item in site.data.main.navbar %}
+              {% if item.version == 1 %}<a class="p-2 text-dark" href="{{ item.url | absolute_url}}">{{ item.title }}</a>{% endif %}
+            {% endfor %}</nav>
         </div>
     </div>
-    <a class='btn btn-outline-success rounded-pill' href='#price'>Pesan Sekarang</a>
+    <a class="btn btn-outline-success rounded-pill" href="{{ "#price" | absolute_url}}">Pesan Sekarang</a>
 </div>

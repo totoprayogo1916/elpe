@@ -10,3 +10,38 @@ navbar:
   - title: "Harga"
     url: "#price"
     version: 1
+
+  - title: "Blog"
+    url: "/blog"
+    version: 1
+
+akun:
+ twitter: landingpageku_
+ instagram: landingpageku
+ facebook: landingpageku
+ email: hubungi@landingpageku.com
+
+pricing:
+  - package: standar
+    feature:
+      - contoh url; landingpageku.com/p/usaha/
+      - template tinggal pilih
+      - gratis revisi/update selama aktif
+    price: 200
+    featured: no
+
+  - package: pro
+    feature:
+      - url subdomain landingpageku.com
+      - template tinggal pilih / sesuai keinginan
+      - gratis revisi/update selama aktif
+    price: 400
+    featured: yes
+
+  - package: premium
+    feature:
+      - gratis domain .com
+      - template tinggal pilih / sesuai keinginan
+      - gratis revisi/update selama aktif
+    price: 750
+    featured: no

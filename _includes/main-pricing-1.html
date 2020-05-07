@@ -2,57 +2,29 @@
     <div class='container'>
         <h2 class='text-center mb-5 text-uppercase'>Daftar Harga</h2>
         <div class='pricing card-deck flex-column flex-md-row mb-3'>
-            <div class='card card-pricing text-center border-secondary px-3 mb-4'>
-                <span class='h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-secondary text-white shadow-sm'>Starter</span>
-                <div class='bg-transparent card-header pt-4 border-0'>
-                    <h3 class='h1 font-weight-normal text-primary text-center mb-0'><span class='price'>199</span><span class='h6 text-muted'>.000</span></h3>
+
+            {% for pricing in site.data.main.pricing %}
+            <div class="card card-pricing text-center border-secondary px-3 mb-4">
+                <span class="h6 w-60 mx-auto px-4 py-1 text-uppercase rounded-bottom bg-secondary text-white shadow-sm">{{pricing.package}}</span>
+                <div class="bg-transparent card-header pt-4 border-0">
+                    <h2 class="h1 font-weight-normal text-primary mb-0 d-flex justify-content-center align-items-start">
+                        <span class="price">{{pricing.price}}</span>
+                        <div class="d-flex flex-column align-items-start mt-2">
+                            <span class="h6 mb-0 text-muted">.000</span>
+                            <span class="h6 mb-0 text-muted"><sup>/tahun</sup></span>
+                        </div>
+                    </h2>
                 </div>
-                <div class='card-body pt-0'>
-                    <ul class='list-unstyled mb-4'>
-                        <li>sub-domain <code>.landingpageku.com</code></li>
-                        <li>Tanpa Desainer Page</li>
-                        <li>Tanpa Widget Setting</li>
-                        <li>Tanpa halaman post/page</li>
-                        <li>Tanpa Halaman Akses *</li>
-                        <li>Free Support</li>
+                <div class="card-body pt-0">
+                    <ul class="list-unstyled mb-4">
+                        {% for feature in pricing.feature %}
+                        <li>{{feature}}</li>
+                        {% endfor %}
                     </ul>
-                    <a class='btn btn-outline-secondary mb-3' href='https://api.whatsapp.com/send?phone=6281225117896&text=Halo, saya mau pesan Landingpage paket starter' target='_blank'>Pesan</a>
+                    <a class="btn btn-outline-secondary mb-3" href="https://api.whatsapp.com/send?phone={{page.whatsapp}}&text=Halo, saya mau pesan paket {{pricing.package}}" target="_blank">Pesan Sekarang</a>
                 </div>
             </div>
-            <div class='card card-pricing popular border-primary shadow text-center px-3 mb-4'>
-                <span class='h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm'>Professional</span>
-                <div class='bg-transparent card-header pt-4 border-0'>
-                    <h2 class='h1 font-weight-normal text-primary text-center mb-0'><span class='price'>399</span><span class='h6 text-muted'>.000</span></h2>
-                </div>
-                <div class='card-body pt-0'>
-                    <ul class='list-unstyled mb-4'>
-                        <li>sub-domain <code>.landingpageku.com</code></li>
-                        <li>Dengan Desainer Page</li>
-                        <li>Dengan Widget Page</li>
-                        <li>Tanpa halaman post/page</li>
-                        <li>Dengan Halaman akses</li>
-                        <li>Free support</li>
-                    </ul>
-                    <a class='btn btn-primary mb-3' href='https://api.whatsapp.com/send?phone=6281225117896&text=Halo, saya mau pesan Landingpage paket professional' target='_blank'>Pesan</a>
-                </div>
-            </div>
-            <div class='card card-pricing border-secondary text-center px-3 mb-4'>
-                <span class='h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-secondary text-white shadow-sm'>Business</span>
-                <div class='bg-transparent card-header pt-4 border-0'>
-                    <h2 class='h1 font-weight-normal text-primary text-center mb-0'><span class='price'>599</span><span class='h6 text-muted'>.000</span></h2>
-                </div>
-                <div class='card-body pt-0'>
-                    <ul class='list-unstyled mb-4'>
-                        <li>Free domain <code>.com</code></li>
-                        <li>Dengan Desainer Page</li>
-                        <li>Dengan Widget Page</li>
-                        <li>Dengan halaman post/page</li>
-                        <li>Dengan Halaman Akses</li>
-                        <li>Free support</li>
-                    </ul>
-                    <a class='btn btn-outline-secondary mb-3' href='https://api.whatsapp.com/send?phone=6281225117896&text=Halo, saya mau pesan Landingpage paket business' target='_blank'>Pesan</a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
