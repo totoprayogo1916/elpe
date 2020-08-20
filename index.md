@@ -5,6 +5,6 @@ description: "Jasa Pembuatan Landingpage dengan tampilan yang bersih, kekinian d
 judul: "Jasa Pembuatan landing Page"
 lang: id_ID
 
-whatsapp: 6281225117896
+whatsapp: 6287773696995
 
 ---
